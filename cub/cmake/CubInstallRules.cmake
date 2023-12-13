@@ -12,7 +12,7 @@ install(DIRECTORY "${CUB_SOURCE_DIR}/cub"
 
 install(DIRECTORY "${CUB_SOURCE_DIR}/cub/cmake/"
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/cub"
-  PATTERN *-header-search.cmake EXCLUDE
+  REGEX "(.*-header-search\.cmake|.*\.cmake\.in)" EXCLUDE
 )
 # Need to configure a file to store the infix specified in
 # CMAKE_INSTALL_INCLUDEDIR since it can be defined by the user

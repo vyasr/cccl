@@ -22,7 +22,7 @@ install(DIRECTORY "${libcudacxx_SOURCE_DIR}/include/nv"
 # Libcudacxx cmake package
 install(DIRECTORY "${libcudacxx_SOURCE_DIR}/lib/cmake/libcudacxx"
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake"
-  PATTERN *-header-search.cmake EXCLUDE
+  REGEX "(.*-header-search\.cmake|.*\.cmake\.in)" EXCLUDE
 )
 
 # Need to configure a file to store CMAKE_INSTALL_INCLUDEDIR
